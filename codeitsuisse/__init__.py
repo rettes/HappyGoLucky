@@ -4,7 +4,7 @@ import codeitsuisse.routes.square
 import codeitsuisse.routes.inventory_management
 import codeitsuisse.routes.fruitbasket
 import codeitsuisse.routes.salad_spree
-import codeitsuisse.routes.intelligent_farming
+import codeitsuisse.routes.contact_trace
 
 
 
