@@ -17,7 +17,7 @@ def evaluate():
     return json.dumps(result);
 
 @app.route('/inventory-management', methods=['POST'])
-def evaluate():
+def evaluate2():
     data = request.get_json();
     logging.info("data sent for evaluation {}".format(data))
     inputValue = data.get("input");
