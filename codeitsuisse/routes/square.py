@@ -16,5 +16,13 @@ def evaluate():
     logging.info("My result :{}".format(result))
     return json.dumps(result);
 
+@app.route('/inventory-management', methods=['POST'])
+def evaluate():
+    data = request.get_json();
+    logging.info("data sent for evaluation {}".format(data))
+    inputValue = data.get("input");
+    print(inputValue)
+    # logging.info("My result :{}".format(result))
+    # return json.dumps(result);
 
 
