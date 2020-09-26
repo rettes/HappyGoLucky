@@ -24,7 +24,9 @@ def evaluateSalad():
             continue
         open_stores = []
         for i, store in enumerate(street):
-            if store == "X":
+            if store != "X":
+                open_stores.append(int(store))
+            if store == "X" or i == len(street) - 1:
                 while len(open_stores) > n:
                     first = open_stores[0]
                     last = open_stores[-1]
@@ -34,25 +36,13 @@ def evaluateSalad():
                         del open_stores[-1]
                 if sum(open_stores) < minimum and len(open_stores) == n:
                     minimum = sum(open_stores)
-                open_stores = []
-            else:
-                open_stores.append(int(store))
-            if len(open_stores) < n:
-                continue
-        while len(open_stores) > n:
-            first = open_stores[0]
-            last = open_stores[-1]
-            if first > last:
-                del open_stores[0]
-            else:
-                    del open_stores[-1]
-            if sum(open_stores) < minimum and len(open_stores) == n:
-                minimum = sum(open_stores)    
+                open_stores = []    
     result_dict = {}
     if minimum != float("inf"):
         result_dict["result"] = minimum
     else:
         result_dict["result"] = 0
+    #print(jsonify(result_dict))
     return json.dumps(result_dict)
     #print(jsonify(result_dict))
 
