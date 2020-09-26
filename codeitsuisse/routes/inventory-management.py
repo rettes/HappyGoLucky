@@ -13,7 +13,7 @@ def evaluate2():
     logging.info("data sent for evaluation {}".format(data))
     inputValue = data.get("input")
     print(inputValue)
-    # logging.info("My result :{}".format(result))
-    # return json.dumps(result);
+    logging.info("My result :{}".format(result))
+    return json.dumps(result);
 
 
